@@ -15,5 +15,10 @@ public class Job1Test {
         Job1 j1 = new Job1();
         assertEquals("OK!", j1.task2());
     }
+    @Test
+    public void mytestStrMaster() {
+        Job1 j1 = new Job1();
+        assertEquals("master", j1.task3m());
+    }
 
 }

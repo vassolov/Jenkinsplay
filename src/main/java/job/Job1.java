@@ -10,4 +10,8 @@ public class Job1 {
     public String task2(){
         return "OK!";
     }
+
+    public String task3m(){
+        return "master";
+    }
 }
