@@ -14,4 +14,9 @@ public class Job1 {
     public String task3m(){
         return "master";
     }
+
+    public String task3_1(){
+        return "master";
+    }
+
 }
