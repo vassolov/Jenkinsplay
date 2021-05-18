@@ -10,10 +10,6 @@ pipeline {
 
     stages {
          stage('Cleanup') {
-             steps {
-                 // ... define any cleanup operations ...
-             }
-         }
          stage('Build') {
             steps {
 
@@ -27,10 +23,12 @@ pipeline {
 
             post {
                 failure {
+                    echo 'failure'
                  }
 
                  // If this build didn't fail, but there were failing tests, send an email to the list.
                  unstable {
+                    echo 'unstable'
                  }
                // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
@@ -40,6 +38,7 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
                 always {
+                    echo 'always'
                 }
             }
         }
