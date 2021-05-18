@@ -20,5 +20,10 @@ public class Job1Test {
         Job1 j1 = new Job1();
         assertEquals("master", j1.task3m());
     }
+    @Test
+    public void mytestStrfail() {
+        Job1 j1 = new Job1();
+        assertEquals("branch-1", j1.task3m());
+    }
 
 }
