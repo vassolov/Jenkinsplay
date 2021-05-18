@@ -19,7 +19,7 @@ pipeline {
                  // failed, record the test results and archive the jar file.
                  success {
                      echo 'run the test on success'
-                     // junit '**/target/surefire-reports/TEST-*.xml'
+                     junit '**/target/surefire-reports/TEST-*.xml'
                      archiveArtifacts 'target/*.jar'
                  }
              }
