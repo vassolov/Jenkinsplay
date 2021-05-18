@@ -14,3 +14,5 @@ target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputF
 target/surefire-reports/Job1Test.txt
 target/surefire-reports/TEST-Job1Test.xml
 target/test-classes/Job1Test.class
+target/JenPlay-1.0-SNAPSHOT.jar
+target/maven-archiver/pom.properties
