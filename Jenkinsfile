@@ -9,7 +9,6 @@ pipeline {
     }
 
     stages {
-         stage('Cleanup') {
          stage('Build') {
             steps {
 
