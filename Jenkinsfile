@@ -8,25 +8,9 @@ pipeline {
          skipStagesAfterUnstable()
      }
 
-//      stages {
-//          stage('Clean') {
-//              steps {
-//                  echo 'Stage Clean'
-//                  bat "mvn clean"
-//              }
-//          }
-//
-         stage('Build') {
+     stages {
+      stage('Build') {
              steps {
-//                  echo 'Get some code from a GitHub repository'
-//                  git 'https://github.com/vassolov/Jenkinsplay.git'
-
-                 // Run Maven on a Unix agent.
-                 // sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
-                 // 'Run Maven on a Windows agent'
-                     // bat "mvn clean package"
-//                      bat "mvn compile"
 
                  bat "mvn -Dmaven.test.failure.ignore=true clean package"
              }
@@ -40,17 +24,6 @@ pipeline {
                  }
              }
          }
-//          stage('Tests') {
-//              steps {
-//                  echo 'Stage Tests'
-//                      bat "mvn -Dmaven.test.failure.ignore=true test"
-//              }
-//              post{
-//                  always{
-//                      junit '**/target/surefire-reports/TEST-*.xml'
-//                  }
-//              }
-//          }
 
         stage('Deploy') {
              steps {
